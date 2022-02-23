@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleOutput"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:text="My Title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionOutput"
+        android:layout_below="@+id/titleOutput"
+        android:textSize="20dp"
+        android:textColor="#5E5E5E"
+        android:text="My long long long description"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeOutput"
+        android:layout_below="@+id/descriptionOutput"
+        android:textSize="12dp"
+        android:gravity="end"
+        android:textColor="#4A4A4A"
+        android:text="Feb 23 2022"/>
+
+
+
+</RelativeLayout>
