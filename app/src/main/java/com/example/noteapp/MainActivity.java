@@ -12,9 +12,11 @@ import com.google.android.material.button.MaterialButton;
 
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
-import io.realm.RealmResults;
+     import io.realm.RealmResults;
+import io.realm.Sort;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Realm.init(getApplicationContext());
         Realm realm = Realm.getDefaultInstance();
 
-        RealmResults<Note> notesList = realm.where(Note.class).findAll();
+        RealmResults<Note> notesList = realm.where(Note.class).findAllSorted("createdTime", Sort.DESCENDING);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
